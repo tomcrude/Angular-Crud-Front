@@ -26,7 +26,7 @@ export class CreateEditComponent {
     user: null
  } 
 
- image:String = "https://static.vecteezy.com/system/resources/previews/005/217/482/non_2x/the-question-mark-in-a-circle-black-icon-vector.jpg"
+ image:string = "https://static.vecteezy.com/system/resources/previews/005/217/482/non_2x/the-question-mark-in-a-circle-black-icon-vector.jpg"
 
  params:any = this.activeRoute.snapshot.paramMap.get('id');
  message:string | null = ""
