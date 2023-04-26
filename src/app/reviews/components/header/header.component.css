@@ -1,0 +1,39 @@
+#logout{
+    background: rgb(123, 30, 30);
+    color: rgb(255, 255, 255);
+    padding: 6px;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    margin-left: 20px;
+    transform: translateY(12px);
+  }
+  .icon{
+    transform: translate(15px,15px);
+    font-size: 28px;
+    flex: 0.1;
+    text-decoration: none;
+  }
+  nav {
+    background: rgb(255, 83, 71);
+    margin: -16px;
+    box-shadow: 0 0 7px #a43030;
+    margin-bottom: 15px;
+    display: flex;
+    height: 50px;
+  }
+  p{
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    flex: 0.76;
+    text-align: end;
+  }
+  a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  span:last-child:hover{
+    box-shadow: 0 0 5px #000000;
+  }

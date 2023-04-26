@@ -1,0 +1,22 @@
+<app-header/>
+  <div id="container">
+    <div id="container-2">
+
+         <span *ngIf="id == review.user"><a routerLink="../../review/edit/create/{{params}}" title="Edit" class="material-symbols-outlined icon" id="edit">edit</a></span>
+
+        <h1>{{review.title}}</h1>
+        <img id="img-1" src="http://localhost:4000/images/{{image}}" alt="{{review.title}}">
+        <p>{{review.description}}</p>
+        <span *ngIf="id == review.user" (click)="delete()"><p title="Delete" class="material-symbols-outlined icon" id="delete">delete</p></span>
+    
+        <p id="error">{{message}}</p>
+    </div>   
+  </div>
+
+  <div id="container-3">
+
+    <span *ngFor="let value of reviews">
+      <app-review *ngIf="reviews[0].title != '' " id="{{value.id}}" title="{{value.title}}" image="{{value.id + '-image.png'}}" description="{{value.description}}"/>
+    </span>
+
+  </div>

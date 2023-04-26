@@ -1,0 +1,14 @@
+div{
+    margin-top: 100px;
+  }
+  img{
+    width: 359px;
+    filter: invert(1);
+  }
+  p{
+    margin-top: 25px;
+    font-size: 18px;
+  }
+  a{
+    font-size: 21px;
+  }

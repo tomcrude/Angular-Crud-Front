@@ -1,0 +1,19 @@
+<app-header/>
+    <div id="container">
+    <div id="container-3"><img title="Angular image" src="{{image}}" alt="Angular"></div>
+    <div id="container-2">
+        <div id="container-2-1">
+            <form (submit)="send()">
+                <h1>{{params == "0" ? "Create Review" : "Edit Review"}}</h1>
+                <input [(ngModel)]="review.title" name="title" placeholder="Title" type="text">
+                <textarea [(ngModel)]="review.description" name="description" id="" cols="23" rows="4" placeholder="Describe the review"></textarea>
+                <input (change)="preview($event)" name="img" title="Upload a image" id="file" type="file">
+                <span class="material-symbols-outlined"><p>image</p></span>
+                <button title="Send" type="submit" class="button-authentication">{{params == "0" ? "CREATE" : "SEND"}}</button>
+                
+            </form>
+          <div *ngIf="message == null" id="spinner"></div>
+          <p id="error">{{message}}</p>
+        </div>
+    </div>
+  </div>

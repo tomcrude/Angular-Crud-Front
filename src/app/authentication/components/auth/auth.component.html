@@ -1,0 +1,21 @@
+<div id="container">
+    <div id="container-3"><img title="Angular image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/768px-Angular_full_color_logo.svg.png" alt="Angular"></div>
+    <div id="container-2">
+        <div id="container-2-1">
+            
+            <form (submit)="send()">
+                <h1>{{title}}</h1>
+                <input name="username" [(ngModel)]="auth.username" autocomplete="on" placeholder="Username" type="text">
+                <input name="email" [(ngModel)]="auth.email" autocomplete="on" *ngIf="title != 'User Login'" placeholder="E-Mail" type="email">
+                <input name="password" autocomplete="on" [(ngModel)]="auth.password" placeholder="Password" type="password">
+                <input name="repeatPassword" autocomplete="on" *ngIf="title != 'User Login'" [(ngModel)]="auth.verifyPassword" placeholder="Repeat Password" type="password">
+                 <p id="error">{{message}}</p> 
+                <button title="Send" type="submit" class="button-authentication">{{button}}</button>
+
+            </form>
+            <div id="spinner" *ngIf="message == null"></div>
+            <a routerLink="{{title === 'Register' ? '/logIn' : '/register'}}" >{{linkText}}</a>
+        </div>
+    </div>
+  </div>
+  <app-footer/>
