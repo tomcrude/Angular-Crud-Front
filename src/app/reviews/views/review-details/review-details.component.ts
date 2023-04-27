@@ -38,12 +38,12 @@ export class ReviewDetailsComponent {
   message:String = ""
   params:any = this.activeRoute.snapshot.paramMap.get('id');
 
-  image:string = "loading.gif"
+  image:string = "./../../../../assets/images/loading.gif"
 
   async ngOnInit(){
 
       this.service.getReview(this.params).pipe(takeUntil(this.onDestroy$)).subscribe({
-      next: (res:any) => {if(res == null){this.router.navigate([`home`])}else {this.review = res; this.image = res.id + "-image.png"
+      next: (res:any) => {if(res == null){this.router.navigate([`home`])}else {this.review = res; this.image = "https://java-crud-back.onrender.com/images/" + res.id + "-image.png"
         this.service.getUserReviews(res.user,this.params).pipe(takeUntil(this.onDestroy$)).subscribe({
         next: (res:any) => {this.reviews = res},
         error: (e:any) => {if (e){this.message = "An error has occurred."}}})}

@@ -2,7 +2,7 @@
     <app-header/>
     <p id="error">{{message}}</p>
     <span *ngFor="let data of review">
-      <app-review *ngIf="review[0].title != '' " id="{{data.id}}" image="{{data.id + '-image.png'}}" title="{{data.title}}" description="{{data.description}}"/>
+      <app-review *ngIf="review[0].title != '' " id="{{data.id}}" image="{{'https://java-crud-back.onrender.com/images/' + data.id + '-image.png'}}" title="{{data.title}}" description="{{data.description}}"/>
     </span>
 
 

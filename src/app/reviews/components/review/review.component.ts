@@ -14,7 +14,7 @@ export class ReviewsComponent {
   @Input() title:string = ""
   @Input() description:string = ""
   @Input() id:string = ""
-  @Input() image:string = "loading.gif"
+  @Input() image:string = "./../../../../assets/images/loading.gif"
 
 
   reDirect(){
