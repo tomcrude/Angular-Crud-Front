@@ -9,7 +9,7 @@ export class ReviewService {
 
   constructor(private http:HttpClient) {}
 
-  url:string = "https://docker-test-br2v.onrender.com/auth"
+  url:string = "https://spring-server-production.up.railway.app/auth"
 
   headers = {headers: new HttpHeaders(
     {

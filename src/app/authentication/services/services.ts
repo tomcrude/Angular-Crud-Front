@@ -12,7 +12,7 @@ export class Service {
 
   headers = {headers: new HttpHeaders({'Authorization': 'Basic ' + window.btoa(window.unescape(encodeURIComponent(environment.user + ':' + environment.password))),'Access-Control-Allow-Origin': "*"})}
 
-  url:string = "https://docker-test-br2v.onrender.com/auth"
+  url:string = "https://spring-server-production.up.railway.app/auth"
 
   createUser(data:auth){ return this.http.post(`${this.url}/register`,data,this.headers) }
 
