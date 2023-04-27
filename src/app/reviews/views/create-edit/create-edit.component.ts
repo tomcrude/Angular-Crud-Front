@@ -80,7 +80,7 @@ export class CreateEditComponent {
 
   if (this.params != "0"){
     this.service.getReview(this.params).pipe(takeUntil(this.onDestroy$)).subscribe({
-      next: (res:any) => {if(res == null){this.router.navigate([`home`])}else{this.review = res; this.image = `http://localhost:4000/images/${res.id}-image.png`}},
+      next: (res:any) => {if(res == null){this.router.navigate([`home`])}else{this.review = res; this.image = `https://java-crud-back.onrender.com/images/${res.id}-image.png`}},
       error: (e:any) => {if (e){this.message = "You must select an image."}}})
   }
 

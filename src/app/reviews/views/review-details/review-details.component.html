@@ -5,7 +5,7 @@
          <span *ngIf="id == review.user"><a routerLink="../../review/edit/create/{{params}}" title="Edit" class="material-symbols-outlined icon" id="edit">edit</a></span>
 
         <h1>{{review.title}}</h1>
-        <img id="img-1" src="http://localhost:4000/images/{{image}}" alt="{{review.title}}">
+        <img id="img-1" src="https://java-crud-back.onrender.com/images/{{image}}" alt="{{review.title}}">
         <p>{{review.description}}</p>
         <span *ngIf="id == review.user" (click)="delete()"><p title="Delete" class="material-symbols-outlined icon" id="delete">delete</p></span>
     
