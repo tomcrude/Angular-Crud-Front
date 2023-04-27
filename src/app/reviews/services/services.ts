@@ -9,7 +9,7 @@ export class ReviewService {
 
   constructor(private http:HttpClient) {}
 
-  url:string = "http://localhost:4000/auth"
+  url:string = "https://docker-test-br2v.onrender.com/auth"
 
   headers = {headers: new HttpHeaders(
     {

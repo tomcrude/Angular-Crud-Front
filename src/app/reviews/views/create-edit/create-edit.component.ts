@@ -5,7 +5,6 @@ import {ReviewService} from "../../services/services"
 import { Subject } from 'rxjs';
 import {takeUntil} from "rxjs/operators"
 import {Router} from '@angular/router';
-import { String } from 'aws-sdk/clients/appstream';
 import {createImg} from "../../../shared/utils/utils"
 
 @Component({

@@ -12,7 +12,7 @@ export class Service {
 
   headers = {headers: new HttpHeaders({'Authorization': 'Basic ' + window.btoa(window.unescape(encodeURIComponent(environment.user + ':' + environment.password))),'Access-Control-Allow-Origin': "*"})}
 
-  url:string = "http://localhost:4000/auth"
+  url:string = "https://docker-test-br2v.onrender.com/auth"
 
   createUser(data:auth){ return this.http.post(`${this.url}/register`,data,this.headers) }
 
