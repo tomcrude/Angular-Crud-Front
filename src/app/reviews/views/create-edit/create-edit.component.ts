@@ -58,7 +58,7 @@ export class CreateEditComponent {
 
     this.service.createReview(formdata).pipe(takeUntil(this.onDestroy$)).subscribe({
       next: (res:any) => {if (res.status !== "201"){this.message = res.status}else{this.router.navigate([`review/${res.id}`])}},
-      error: (e:any) => {if (e){this.message = "An error has occurred."}}})
+      error: (e:any) => {if (e){this.message = "An error has occurred.";console.log(e)}}})
 
   }
   else {

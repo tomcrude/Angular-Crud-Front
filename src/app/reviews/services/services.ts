@@ -23,9 +23,7 @@ export class ReviewService {
 
   getUserReviews(user:string,review:string){return this.http.get(`${this.url}/getUserReviews/${user}/${review}`,this.headers)}
 
-  createReview(data:any){return this.http.post(`${this.url}/createReview`,{headers: new HttpHeaders({
-    'Authorization': 'Basic ' + window.btoa(environment.user + ':' + environment.password)
-  }),body: data})}
+  createReview(data:any){return this.http.post(`${this.url}/createReview`,data,this.headers)}
 
   deleteReview(id:string,token:any,userId:string){return this.http.delete(`${this.url}/deleteReview/${id}`,{headers: new HttpHeaders({
     'Content-Type': 'application/json',
